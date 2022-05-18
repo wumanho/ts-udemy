@@ -84,30 +84,61 @@
 //
 // const cart:Cart<number> = { list:[1,2,3]}
 
-type Func<T extends any[], R> = (...a: T) => R
+// type Func<T extends any[], R> = (...a: T) => R
+//
+// export default function compose(): <R>(a: R) => R
+//
+// export default function compose<A, T extends any[], R>(
+//     f1: (a: A) => R,
+//     f2: Func<T, A>
+// ): Func<T, R>
+//
+// export default function compose(...func: Function[]) {
+//     if (func.length === 0) {
+//         return <T>(arg: T): T => arg
+//     }
+// }
+//
+//
+// function add1(str) {
+//     return str + '1'
+// }
+//
+// function add2(str) {
+//     return str + '2'
+// }
+//
+// compose<string, any[], string>(add1, add2)("hi")
 
-export default function compose(): <R>(a: R) => R
+// type Func = (a: number, n: number) => void
+// let m: Func
+//
+// function f1(a: number) {
+//     console.log(a)
+// }
+//
+// m = f1
+//
+// m(1,2)
 
-export default function compose<A, T extends any[], R>(
-    f1: (a: A) => R,
-    f2: Func<T, A>
-): Func<T, R>
+// type GetPerson = () => { name: string, age: number }
+// let getP: GetPerson
+//
+// function g() {
+//     return {name: 'wumanho', age: 18}
+// }
+//
+// function g2() {
+//     return {name: "wumanho", age: 10, gender: 0}
+// }
+//
+// function g3() {
+//     return {name: "wumanho"}
+// }
+//
+// getP = g2
+//
+// console.log(getP())
 
-export default function compose(...func: Function[]) {
-    if (func.length === 0) {
-        return <T>(arg: T): T => arg
-    }
-}
-
-
-function add1(str) {
-    return str + '1'
-}
-
-function add2(str) {
-    return str + '2'
-}
-
-compose<string, any[], string>(add1, add2)("hi")
 
 
