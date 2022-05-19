@@ -110,16 +110,17 @@
 //
 // compose<string, any[], string>(add1, add2)("hi")
 
-// type Func = (a: number, n: number) => void
-// let m: Func
-//
-// function f1(a: number) {
-//     console.log(a)
-// }
-//
-// m = f1
-//
-// m(1,2)
+type Func = (a: number, n: number) => void
+
+let m: Func
+
+function f1(a: number) {
+    console.log(a)
+}
+
+m = f1
+
+// m(1)
 
 // type GetPerson = () => { name: string, age: number }
 // let getP: GetPerson
@@ -141,4 +142,57 @@
 // console.log(getP())
 
 
+// class Animal {
+// }
+//
+// class Dog extends Animal {
+//     public name: string = "Dog"
+// }
+//
+// class BlackDog extends Dog {
+//     public age: number = 19
+// }
+//
+// class WhiteDog extends Dog {
+//     public home: string = "gz"
+// }
+//
+// let animal: Animal
+// let dog: Dog
+// let blackDog: BlackDog
+// let whiteDog: WhiteDog
+//
+// type CallBack = (dog: Dog) => Dog
+//
+// function test(callBack: CallBack): void {
+// }
+//
+// type ChildToChild = (blackDog: BlackDog) => BlackDog
+// let childToChild: ChildToChild
+// test(childToChild)
+//
+// type ParentToChild = (animal: Animal) => BlackDog
+// let ParentToChild: ParentToChild
+// test(ParentToChild)
+
+interface Bird {
+    wing: number
+}
+
+interface Dog {
+    leg: number
+}
+
+function getNumber(x: Bird | Dog) {
+    if ("wing" in x){
+        console.log(x)
+    }else{
+        console.log(x)
+    }
+}
+
+let b:Bird = {
+    wing:3
+}
+getNumber(b)
 

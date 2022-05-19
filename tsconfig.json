@@ -4,7 +4,8 @@
     "target": "ES2022",
     "sourceMap": true,
     "experimentalDecorators": true,
-    "allowJs": true
+    "allowJs": true,
+    "strictFunctionTypes": true
   },
   "exclude": [
     "node_modules"
